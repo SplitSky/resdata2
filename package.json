@@ -1,0 +1,37 @@
+{
+  "name": "resdata2",
+  "version": "1.0.0",
+  "description": "UI for the resdata data pipeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SplitSky/resdata2.git"
+  },
+  "keywords": [
+    "Data",
+    "Pipeline",
+    "UI",
+    "Data-Processing",
+    "Visualization",
+    "Workflow-Management",
+    "ETL",
+    "Data-Integration",
+    "Dashboard",
+    "Data-Flow",
+    "Node.js",
+    "React",
+    "Frontend",
+    "Backend",
+    "Visualization-Tools",
+    "Workflow-Automation"
+  ],
+  "author": "SplitSky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SplitSky/resdata2/issues"
+  },
+  "homepage": "https://github.com/SplitSky/resdata2#readme"
+}
