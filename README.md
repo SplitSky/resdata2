@@ -1,5 +1,7 @@
 # ResData
 
+THIS IS A PLACEHOLDER. I WILL WRITE IT PROPERLY ONCE SOMETHING WORKS
+
 ResData is a comprehensive full-stack application designed to facilitate efficient data management and analysis for research groups. Built with FastAPI, MongoDB, Svelte, and Kubernetes, ResData aims to provide a robust and scalable solution for handling large datasets generated from lab equipment.
 
 ## Table of Contents
@@ -31,63 +33,6 @@ ResData is a comprehensive full-stack application designed to facilitate efficie
 - **Containerization**: Docker
 - **Orchestration**: Kubernetes
 - **Cloud**: AWS
-
-## Project Structure
-resdata/
-├── backend/
-│ ├── app/
-│ │ ├── init.py
-│ │ ├── main.py
-│ │ ├── models/
-│ │ │ ├── init.py
-│ │ │ └── models.py
-│ │ ├── routes/
-│ │ │ ├── init.py
-│ │ │ └── api.py
-│ │ ├── services/
-│ │ │ ├── init.py
-│ │ │ └── service.py
-│ │ ├── utils/
-│ │ │ ├── init.py
-│ │ │ └── utils.py
-│ │ └── tests/
-│ │ ├── init.py
-│ │ ├── test_main.py
-│ │ └── test_service.py
-│ ├── Dockerfile
-│ ├── requirements.txt
-│ └── README.md
-├── frontend/
-│ ├── public/
-│ │ └── index.html
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── NavBar.svelte
-│ │ │ └── Footer.svelte
-│ │ ├── routes/
-│ │ │ ├── Home.svelte
-│ │ │ └── About.svelte
-│ │ ├── store/
-│ │ │ └── store.js
-│ │ ├── App.svelte
-│ │ └── main.js
-│ ├── package.json
-│ ├── rollup.config.js
-│ └── README.md
-├── k8s/
-│ ├── deployment.yaml
-│ ├── service.yaml
-│ └── ingress.yaml
-├── scripts/
-│ ├── deploy.sh
-│ └── init_db.py
-├── .github/
-│ └── workflows/
-│ ├── ci.yml
-│ └── cd.yml
-├── .dockerignore
-├── .gitignore
-└── README.md
 
 ## Installation
 
