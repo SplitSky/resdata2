@@ -6,28 +6,25 @@ from time import sleep
 """ Server and client imports """
 from typing import List, Dict
 from fastapi import FastAPI, HTTPException, status
-from jose import jwt
+#from jose import jwt
 from pymongo.errors import OperationFailure
 from pymongo.mongo_client import MongoClient
 from dotenv import load_dotenv
 
 """Project imports"""
 import datastructure as d
-import variables as var
 """Environment variables import"""
-DB_HOST= os.getenv('DB_HOST')
-DB_PORT= os.getenv('DB_PORT')
 DB_USER= os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
-DB_NAME = os.getenv('DB_NAME')
-
+DB_CLUSTER = os.getenv('DB_CLUSTER')
 """Authentication imports"""
 from security import User_Auth
-from variables import secret_key, algorithm, access_token_expire, API_key
 import hashlib as h
+#from variables import secret_key, algorithm, access_token_expire, API_key
+
 
 # testing string
-string = f"mongodb+srv://splitsky:{var.password}@cluster0.xfvstgi.mongodb.net/?retryWrites=true&w=majority"
+string = f"mongodb+srv://{DB_USER}:{DB_PASSWORD}@cluster0.{DB_CLUSTER}.mongodb.net/?retryWrites=true&w=majority"
 # virtual machine string
 #string = f"mongodb://splitsky:{var.password}@127.0.0.1/?retryWrites=true&w=majority"
 client = MongoClient(string)
