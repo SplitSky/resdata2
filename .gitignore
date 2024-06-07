@@ -130,3 +130,8 @@ dmypy.json
 # Frontend
 node_modules/
 dist/
+/node_modules/
+/public/build/
+.DS_Store
+front_end/.svelte-kit/
+/.svelte-kit/
