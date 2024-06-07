@@ -17,7 +17,6 @@ class Dataset(BaseModel):
     data_type: str
     """Allows for user generated flag which distinguishes types of data included"""
     author: List[dict]
-    """List of authors with their given permissions. Used in authentication and retrieval."""
     # variables used in authentication
     username: Union[str, None] = None
     """Optional variable used during authentication. Works as a credentials requests body. Contain the username of the user inserting the dataset"""
