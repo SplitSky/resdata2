@@ -21,15 +21,14 @@ pip3 install --upgrade pip
 # Install dependencies from requirements.txt
 echo "Installing dependencies..."
 pip3 install -r requirements.txt
-pip install -r requirements.txt
-
 echo "Setup completed. Virtual environment created and dependencies installed."
 
-pip3 install python-jose
-pip install python-jose
+#pip3 install python-jose
+#pip install python-jose
 
-pip3 install pymongo
-pip install pymongo
+#pip3 install pymongo
+#pip install pymongo
 
 pip3 install --upgrade pip
-pip install --upgrade pip
+
+

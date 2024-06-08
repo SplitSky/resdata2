@@ -1,4 +1,5 @@
 from typing import Union
+import os
 # Crypto
 import hashlib as h
 import random
@@ -14,11 +15,10 @@ from fastapi import HTTPException, status
 from jose import jwt, JWTError
 from pymongo.mongo_client import MongoClient
 # Internal
-from variables import secret_key, algorithm, access_token_expire
 # declare constants for the authentication
-SECRET_KEY = secret_key
-ALGORITHM = algorithm
-ACCESS_TOKEN_EXPIRE_MINUTES = access_token_expire
+SECRET_KEY = os.getenv('DB_SECRET_KEY')
+ALGORITHM = os.getenv('HASH_ALG')
+ACCESS_TOKEN_EXPIRE_MINUTES = os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES')
 
 ### key manager object
 class key_manager(object):
@@ -240,7 +240,7 @@ class User_Auth(key_manager):
             headers={"WWW-Authenticate": "Bearer"}
         )
         try:
-            payload = jwt.decode(self.password, secret_key, algorithms=[algorithm])
+            payload = jwt.decode(self.password, SECRET_KEY, algorithms=[ALGORITHM])
             # payload contains the username and expiry date of the token as a string
             username = payload.get("sub")
             if username is None:

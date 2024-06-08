@@ -1,5 +1,6 @@
 """ The API_server file containing all the API calls used by the interface. """
 """Data structure imports"""
+import os
 import json
 from datetime import datetime, timedelta
 from time import sleep
@@ -9,25 +10,29 @@ from fastapi import FastAPI, HTTPException, status
 #from jose import jwt
 from pymongo.errors import OperationFailure
 from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
 
 """Project imports"""
 import datastructure as d
 """Environment variables import"""
+# Loads the environmental variables
+load_dotenv()
+
 DB_USER= os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_CLUSTER = os.getenv('DB_CLUSTER')
+DB_CLUSTER_SECTION = os.getenv('DB_CLUSTER_SECTION')
+
 """Authentication imports"""
 from security import User_Auth
 import hashlib as h
 #from variables import secret_key, algorithm, access_token_expire, API_key
-
-
 # testing string
-string = f"mongodb+srv://{DB_USER}:{DB_PASSWORD}@cluster0.{DB_CLUSTER}.mongodb.net/?retryWrites=true&w=majority"
+string = f"mongodb+srv://{DB_USER}:{DB_PASSWORD}@cluster0.{DB_CLUSTER}.mongodb.net/?retryWrites=true&w=majority&appName={DB_CLUSTER_SECTION}"
 # virtual machine string
 #string = f"mongodb://splitsky:{var.password}@127.0.0.1/?retryWrites=true&w=majority"
-client = MongoClient(string)
+client = MongoClient(string, server_api=ServerApi('1'))
 """Initialises the API"""
 app = FastAPI()
 
