@@ -4,3 +4,5 @@ pydantic==2.7.3
 pymongo==4.7.3
 python-dotenv==1.0.1
 python_jose==3.3.0
+# optional for development
+pytest==8.2.2

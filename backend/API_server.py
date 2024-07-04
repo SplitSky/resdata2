@@ -18,24 +18,21 @@ import datastructure as d
 """Environment variables import"""
 # Loads the environmental variables
 load_dotenv()
-
 DB_USER= os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_CLUSTER = os.getenv('DB_CLUSTER')
 DB_CLUSTER_SECTION = os.getenv('DB_CLUSTER_SECTION')
-
+API_key = os.getenv('DB_SECRET_KEY')
 """Authentication imports"""
 from security import User_Auth
 import hashlib as h
-#from variables import secret_key, algorithm, access_token_expire, API_key
 # testing string
 string = f"mongodb+srv://{DB_USER}:{DB_PASSWORD}@cluster0.{DB_CLUSTER}.mongodb.net/?retryWrites=true&w=majority&appName={DB_CLUSTER_SECTION}"
-# virtual machine string
-#string = f"mongodb://splitsky:{var.password}@127.0.0.1/?retryWrites=true&w=majority"
 client = MongoClient(string, server_api=ServerApi('1'))
 """Initialises the API"""
 app = FastAPI()
 
+# TODO: Move to utils
 def return_hash(password: str):
     """ Hash function used by the API to decode. It is used to only send hashes and not plain passwords."""
     temp = h.shake_256()
@@ -54,8 +51,8 @@ async def connection_test() -> bool:
         return False
 
 
-@app.get("/names")
-async def return_all_project_names(author: d.Author):
+@app.get("/names", response_model=List[str])
+async def return_all_project_names(author: d.Author) -> dict:
     """ Function which returns a list of project names that the user has permission to view."""
     # validate user
     # check if user was authenticated in and has a valid token
@@ -67,14 +64,13 @@ async def return_all_project_names(author: d.Author):
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="The user hasn't authenticated"
         )
-
     names = client.list_database_names()
     names_out = []
-    # 'Authentication', 'S_Church', 'admin', 'local'
     # remove the not data databases
     names.remove('Authentication')
     names.remove('admin')
     names.remove('local')
+    # TODO: Change this to be a data query that matches the author
     for name in names:
         # fetch database config file
         temp_project = client[name]
@@ -102,6 +98,7 @@ async def return_dataset(project_id, experiment_id, dataset_id, user: d.User) ->
     if not current_user.authenticate_token():
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="The token failed to authenticate")
     # Connect to experiment
+    # TODO: Move the check to see if it exists from interface to API call
     experiment_collection = client[project_id][experiment_id]
     result = experiment_collection.find_one({"name": dataset_id})
 

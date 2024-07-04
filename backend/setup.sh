@@ -21,7 +21,11 @@ pip3 install --upgrade pip
 # Install dependencies from requirements.txt
 echo "Installing dependencies..."
 pip3 install -r requirements.txt
+pip3 install numpy # for development
+pip3 install Pillow
+pip3 install matplotlib
 echo "Setup completed. Virtual environment created and dependencies installed."
+
 
 #pip3 install python-jose
 #pip install python-jose

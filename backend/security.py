@@ -20,6 +20,14 @@ SECRET_KEY = os.getenv('DB_SECRET_KEY')
 ALGORITHM = os.getenv('HASH_ALG')
 ACCESS_TOKEN_EXPIRE_MINUTES = os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES')
 
+'''
+Code Review notes:
+1. Standardise the library used
+2. Figure out the hashing and password encryption
+3. 
+'''
+
+
 ### key manager object
 class key_manager(object):
     def __init__(self):
@@ -59,6 +67,7 @@ class key_manager(object):
                 f.read(), backend=default_backend()
             )
         return private_key, public_key
+
     def encrypt_message(self,message : str, public_key)->str:
         message_temp = bytes(message, encoding='latin-1')
         temp = public_key.encrypt(message_temp,
@@ -82,7 +91,6 @@ class key_manager(object):
         return temp
 
     def serialize_public_key(self, pem):
-         
         key =  serialization.load_pem_public_key(
                 pem, backend=default_backend()
             )
@@ -296,29 +304,3 @@ class User_Auth(key_manager):
                     return True
         return False
 
-# def check_user_permission(self, username, permission_requested, project_id, experiment_id):
-   #     """Checks whether a user has the requested permission or higher"""
-   #     collection_variable = self.client[project_id][experiment_id]
-   #     result = collection_variable.find_one({"name" : experiment_id})
-   #     if result == None:
-   #         raise HTTPException(status_code=status.HTTP_400_NO_CONTENT,
-   #                             detail="The dataset wasn't found")
-   #     author_list = result.get("author")
-   #     for entry in author_list:
-   #         if entry.get("name") == username:
-   #             # username found
-   #             if entry.get("permission") == permission_requested or entry.get("permission") == "admin":
-   #                 return True
-   #     return False
-                    
-   # def get_signed_message(self, private_key, ui_public_key, message):
-   #     final_message = self.decrypt_message(message, private_key)
-   #     return self.decrypt_message(final_message, ui_public_key)
-
-   # def encrypt_and_sign_message(self, public_key, ui_private_key, message):
-   #     # sign
-   #     message_final = self.encrypt_message(message, ui_private_key) 
-   #     # encrypt
-   #     return self.encrypt_message(message_final, public_key)
-    
-        
