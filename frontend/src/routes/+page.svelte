@@ -62,166 +62,115 @@
 </footer>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-  
-    :global(body) {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-    }
-  
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #1f1f1f;
-      padding: 1rem 2rem;
-      border-bottom: 2px solid #333;
-    }
-  
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-  
-    .logo img {
-      height: 120px;
-      margin-right: 1rem;
-    }
-  
-    .logo span {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ffffff;
-    }
-  
-    nav {
-      display: flex;
-      gap: 1rem;
-    }
-  
-    nav a {
-      color: #b3b3b3;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-  
-    nav a:hover {
-      color: #bb86fc;
-    }
-  
-    .user-section {
-      display: flex;
-      align-items: center;
-    }
-  
-    .user-info {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-  
-    .user-info img {
-      height: 40px;
-      border-radius: 50%;
-    }
-  
-    .user-info span {
-      font-size: 1rem;
-      color: #ffffff;
-    }
-  
-    button {
-      background: #bb86fc;
-      color: #ffffff;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-  
-    button:hover {
-      background: #9f68e0;
-    }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-:global(body) {
+  :global(body) {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #121212;
     color: #ffffff;
-}
+  }
 
-header {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: #1f1f1f;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 1rem 2rem;
     border-bottom: 2px solid #333;
-}
+  }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 120px;
+    margin-right: 1rem;
+  }
+
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #ffffff;
-}
+  }
 
-nav {
-    margin: 2rem 0;
+  nav {
+    display: flex;
+    gap: 1rem;
     text-align: center;
-}
+    margin: 2rem 0;
+  }
 
-nav a {
-    margin: 0 1rem;
+  nav a {
     color: #b3b3b3;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-}
+  }
 
-nav a:hover {
+  nav a:hover {
     color: #bb86fc;
-}
+  }
 
-main {
+  main {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-}
+  }
 
-section {
+  section {
     margin-bottom: 2rem;
-}
+  }
 
-h2 {
+  h2 {
     color: #bb86fc;
     margin-bottom: 1rem;
     font-size: 1.5rem;
-}
+  }
 
-p, ul {
+  p, ul {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-}
+  }
 
-ul {
+  ul {
     list-style-type: none;
     padding: 0;
-}
+  }
 
-li {
+  li {
     background: #1f1f1f;
     margin: 0.5rem 0;
     padding: 0.5rem;
     border-radius: 5px;
     border: 1px solid #333;
-}
+  }
 
-button {
+  .user-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .user-info img {
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .user-info span {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+
+  button {
     background: #bb86fc;
     color: #ffffff;
     border: none;
@@ -230,13 +179,13 @@ button {
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s ease;
-}
+  }
 
-button:hover {
+  button:hover {
     background: #9f68e0;
-}
+  }
 
-footer {
+  footer {
     background: #1f1f1f;
     padding: 1rem 0;
     text-align: center;
@@ -244,10 +193,10 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
+  }
 
-footer p {
+  footer p {
     margin: 0;
     font-size: 0.9rem;
-}
+  }
 </style>
