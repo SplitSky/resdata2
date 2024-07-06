@@ -40,24 +40,17 @@
 <main>
 <section>
     <div class="section">
-        <h2>About Resdata2</h2>
-        <p>  </p>
-        </div>
+        <h2 class="title-lean" >Start your journey with data here!</h2>
+    </div>
+    <picture class="full-page-picture">
+      <source srcset="backdrop.png" type="image/png">
+    </picture>
     <button>Get Started</button>
-</section>
-
-<section>
-    <h2>Features</h2>
-    <ul class="list-disc list-inside">
-        <li>Efficient Data Upload and Management</li>
-        <li>Project and Experiment Tracking</li>
-        <li>Real-time Data Updates</li>
-      </ul>
 </section>
 </main>
 
 <footer>
-<p>&copy; 2024 ResData2. All rights reserved.</p>
+<p>&copy; 2024 ResData2. This project is open source!</p>
 </footer>
 
 <style>
@@ -69,6 +62,19 @@
     background-color: #121212;
     color: #ffffff;
   }
+
+  h2.title-lean {
+    font-family: 'Arial', sans-serif;
+    font-weight: 300; /* Lean weight */ 
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.2em;
+  }
+
 
   header {
     display: flex;
@@ -85,7 +91,7 @@
   }
 
   .logo img {
-    height: 120px;
+    height: 90px;
     margin-right: 1rem;
   }
 
