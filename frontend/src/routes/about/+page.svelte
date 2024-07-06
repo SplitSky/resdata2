@@ -1,18 +1,23 @@
+<script>
+  // your script goes here
+</script>
+
 <header>
-  <h1>About Resdata2</h1>
+  <h1>About Resdata</h1>
 </header>
 
 <nav>
   <a href="/">Home</a>
   <a href="/documentation">Documentation</a>
   <a href="/login">Login</a>
-  <a href="/profile">Profile</a>
 </nav>
 
 <main>
   <section>
     <h2>Project Overview</h2>
-    <p>Resdata2 is designed to help researchers efficiently manage and analyze their experimental data. Our platform offers a suite of tools to handle high-throughput material research, allowing you to focus on your research rather than data management.</p>
+    <p>So what is resdata? It is a full-stack application with one purpose in mind. To allow a team of researchers that work on data to use modern data tools to allow for seamless integration between mutliple systems. It is designed to allow for an integration of a simple data system with minimal technical knowledge.  </p>
+    <p>Resdata is designed to help researchers efficiently manage and analyze their experimental data. Our platform offers a suite of tools to handle high-throughput material research, allowing you to focus on your research rather than data management.</p>
+    <h3> Technical Details </h3>
   </section>
 
   <section>
@@ -33,28 +38,22 @@
   <section>
     <h2>About the Developer</h2>
     <p>My name is [Your Name], and I am a passionate full-stack developer with extensive experience in API design, C++, MongoDB, and more. Resdata2 is my flagship project, showcasing my ability to create comprehensive, user-friendly applications. I am dedicated to continuous improvement and helping researchers take advantage of industry-level approaches to data-driven research.</p>
+    <p> I am Tom! I am a physicist and during my Master's thesis I was a part of a project with the OMS group. The core of the project was making a data pipeline for use in research in material science. Given my love for data, expertise in physics and 
   </section>
 
   <section>
     <h2>Contact Information</h2>
     <p>If you have any questions or would like to collaborate, feel free to reach out:</p>
     <ul>
-      <li>Email: your.email@example.com</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" class="text-blue-500">yourprofile</a></li>
-      <li>GitHub: <a href="https://github.com/yourgithub" class="text-blue-500">yourgithub</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/tomasz-neska-444476187/" class="text-blue-500">here</a></li>
+      <li>GitHub: <a href="https://github.com/SplitSky" class="text-blue-500">here</a></li>
     </ul>
   </section>
 
   <section>
-    <button>Get Started with Resdata2</button>
+    <button>Get Started with Resdata</button>
   </section>
 </main>
-
-<footer>
-  <p>&copy; 2024 Resdata2. All rights reserved.</p>
-</footer>
-
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -161,58 +160,5 @@
   }
 </style>
 
-<header>
-  <h1>About Resdata2</h1>
-</header>
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/documentation">Documentation</a>
-  <a href="/login">Login</a>
-  <a href="/profile">Profile</a>
-</nav>
 
-<main>
-  <section>
-    <h2>Project Overview</h2>
-    <p>Resdata2 is designed to help researchers efficiently manage and analyze their experimental data. Our platform offers a suite of tools to handle high-throughput material research, allowing you to focus on your research rather than data management.</p>
-  </section>
-
-  <section>
-    <h2>Key Features</h2>
-    <ul>
-      <li>Efficient Data Upload and Management</li>
-      <li>Project and Experiment Tracking</li>
-      <li>Real-time Data Updates</li>
-      <li>User Authentication and Profile Management</li>
-      <li>Comprehensive Documentation</li>
-      <li>API Key Management</li>
-      <li>Data Browser</li>
-      <li>Responsive and Intuitive Interface</li>
-      <li>Error Handling and Notifications</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>About the Developer</h2>
-    <p>My name is [Your Name], and I am a passionate full-stack developer with extensive experience in API design, C++, MongoDB, and more. Resdata2 is my flagship project, showcasing my ability to create comprehensive, user-friendly applications. I am dedicated to continuous improvement and helping researchers take advantage of industry-level approaches to data-driven research.</p>
-  </section>
-
-  <section>
-    <h2>Contact Information</h2>
-    <p>If you have any questions or would like to collaborate, feel free to reach out:</p>
-    <ul>
-      <li>Email: your.email@example.com</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" class="text-blue-500">yourprofile</a></li>
-      <li>GitHub: <a href="https://github.com/yourgithub" class="text-blue-500">yourgithub</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <button>Get Started with Resdata2</button>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2024 Resdata2. All rights reserved.</p>
-</footer>

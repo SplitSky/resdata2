@@ -15,7 +15,6 @@
 <header>
     <div class="logo">
       <img src="logo_bg.png" alt="Project Icon" />
-      <span>ResData2</span>
     </div>
     
     <nav>
@@ -42,7 +41,7 @@
 <section>
     <div class="section">
         <h2>About Resdata2</h2>
-        <p>Resdata2 is designed to help researchers efficiently manage and analyze their experimental data. Our platform offers a suite of tools to handle high-throughput material research, allowing you to focus on your research rather than data management.</p>
+        <p>  </p>
         </div>
     <button>Get Started</button>
 </section>
