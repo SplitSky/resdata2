@@ -121,7 +121,6 @@
     padding-bottom: 0.2em;
   }
 
-
   .features {
     text-align: center;
   }
