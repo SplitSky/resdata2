@@ -21,33 +21,31 @@ jobs:
       with:
         node-version: '16'
 
+    - name: Navigate to frontend directory
+      working-directory: ./frontend
+      run: echo "Changed directory to frontend"
+
     - name: Install dependencies
-      run: |
-        cd frontend
-        npm install
+      working-directory: ./frontend
+      run: npm install
 
     - name: Run lint
-      run: |
-        cd frontend
-        npm run lint
+      working-directory: ./frontend
+      run: npm run lint
 
     - name: Check Types
-      run: |
-        cd frontend
-        npm run check
+      working-directory: ./frontend
+      run: npm run check
 
     - name: Run unit tests
-      run: |
-        cd frontend
-        npm run test:unit
+      working-directory: ./frontend
+      run: npm run test:unit
 
     - name: Run integration tests
-      run: |
-        cd frontend
-        npm run test:integration
+      working-directory: ./frontend
+      run: npm run test:integration
 
     - name: Build application
-      run: |
-        cd frontend
-        npm run build
+      working-directory: ./frontend
+      run: npm run build
 
