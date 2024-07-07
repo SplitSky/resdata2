@@ -135,3 +135,4 @@ dist/
 .DS_Store
 front_end/.svelte-kit/
 /.svelte-kit/
+frontend/.svelte-kit
