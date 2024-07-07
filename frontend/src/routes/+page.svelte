@@ -1,4 +1,5 @@
 <script>
+    import FullWidthImage from './FullWidthImage.svelte';
     let user = null; // Replace with actual user data in a real application
   
     function login() {
@@ -22,6 +23,7 @@
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
       <a href="/blog">Blog</a>
+      <a href="/documentation">Documentation</a>
     </nav>
     
     <div class="user-section">
@@ -41,18 +43,62 @@
 <section>
     <div class="section">
         <h2 class="title-lean" >Start your journey with data here!</h2>
+        <FullWidthImage src='backdrop.png' alt="full width front page" />
     </div>
-    <picture class="full-page-picture">
-      <source srcset="backdrop.png" type="image/png">
-    </picture>
-    <button>Get Started</button>
+
+</section>
+<section class="overview">
+    <h2> What is ResData? </h2>
+    <p> Resdata2 is a comprehensive full-stack implementation of a data pipeline API. It is designed to allow for a quick and simple deployment of a data architecture and integration of it with lab equipment to allow a continuous dashboard/analysis as data comes in. This project started as a way of using the technology that's openly available and putting together a simple system that stops you from having to carry a USB stick from a lab to your office. It's simple, free (for small teams) and most importantly it allows for easy programmatic integration with existing code. It's quite literally just an API wrapped with a nice web UI.</p>
+</section>
+
+<section class="features">
+  <h2>Features</h2>
+  <div class="features-list">
+    <div class="feature-item">
+      <strong>Data Ingestion:</strong>
+      <span>Easily upload and organize data from various sources.</span>
+    </div>
+    <div class="feature-item">
+      <strong>Real-Time Analysis:</strong>
+      <span>Analyze data on-the-fly with integrated Jupyter Notebook support.</span>
+    </div>
+    <div class="feature-item">
+      <strong>Scalable Storage:</strong>
+      <span>Efficient data storage with MongoDB and flat file support.</span>
+    </div>
+    <div class="feature-item">
+      <strong>User Management:</strong>
+      <span>Manage team access and permissions with role-based controls.</span>
+    </div>
+    <div class="feature-item">
+      <strong>API Integration:</strong>
+      <span>Seamlessly integrate with lab equipment and other tools.</span>
+    </div>
+    <div class="feature-item">
+      <strong>Secure Data:</strong>
+      <span>Ensure data security with advanced encryption and authentication mechanisms.</span>
+    </div>
+     <div class="feature-item">
+      <strong>Use Local Storage:</strong>
+      <span>Allows for integration of your local server if you want to keep data on premises</span>
+    </div>   
+  </div>
+</section>
+<section>
+  <h2> Let's get started! </h2>
+  <button>Get Started</button>
 </section>
 </main>
 
 <footer>
-<p>&copy; 2024 ResData2. This project is open source!</p>
+  <div class="footer-social-media">
+    Resdata2 2024 - Contact us:  
+    <a href="https://x.com/TomekNeska"><img class="tiny-icons" src="twitter_icon.png" alt="Twitter"></a>
+    <a href="https://www.linkedin.com/in/tomasz-neska-444476187/"><img class="tiny-icons" src="linkedIn.png" alt="LinkedIn"></a>
+    <a href="https://github.com/SplitSky"><img class="tiny-icons" src="github.png" alt="GitHub"></a>
+  </div>
 </footer>
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -75,6 +121,36 @@
     padding-bottom: 0.2em;
   }
 
+
+  .features {
+    text-align: center;
+  }
+  
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .feature-item {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+  
+  .feature-item strong {
+    flex-basis: 200px;
+    text-align: left;
+  }
+  
+  .feature-item span {
+    flex-grow: 1;
+    text-align: left;
+  }
 
   header {
     display: flex;
@@ -147,11 +223,8 @@
   }
 
   li {
-    background: #1f1f1f;
     margin: 0.5rem 0;
     padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #333;
   }
 
   .user-section {
@@ -192,7 +265,7 @@
 
   footer {
     background: #1f1f1f;
-    padding: 1rem 0;
+    padding: 0.9rem 0;
     text-align: center;
     border-top: 2px solid #333;
     position: fixed;
@@ -202,6 +275,10 @@
 
   footer p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  img.tiny-icons {
+    height: 20px;
   }
 </style>
