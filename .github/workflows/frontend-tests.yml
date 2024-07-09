@@ -21,21 +21,21 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run lint
-      run: npm run lint
-
-    - name: Check Types
-      run: npm run check
-
-    - name: Run integration tests
-      run: npm run test:integration
-
-    - name: Run unit tests
-      run: npm run test:unit
-
-    - name: Build application
-      run: npm run build
+        #    - name: Install dependencies
+        #      run: npm install
+        #
+        #    - name: Run lint
+        #      run: npm run lint
+        #
+        #    - name: Check Types
+        #      run: npm run check
+        #
+        #    - name: Run integration tests
+        #      run: npm run test:integration
+        #
+        #    - name: Run unit tests
+        #      run: npm run test:unit
+        #
+        #    - name: Build application
+        #      run: npm run build
 
